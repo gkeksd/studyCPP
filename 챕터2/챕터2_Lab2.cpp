@@ -5,10 +5,10 @@ using namespace std;
 int main() {
 	int year, dangi_year;
 
-	print("¿ÃÇØÀÇ ¼­±â ³âµµ¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ");
+	print("ì˜¬í•´ì˜ ì„œê¸° ë…„ë„ë¥¼ ì…ë ¥í•˜ì„¸ìš”: ");
 	cin >> year;
 
 	dangi_year = year + 2333;
 
-	print("¿ÃÇØ´Â ´Ü±â {}³âÀÔ´Ï´Ù", dangi_year);
+	print("ì˜¬í•´ëŠ” ë‹¨ê¸° {}ë…„ì…ë‹ˆë‹¤", dangi_year);
 }
