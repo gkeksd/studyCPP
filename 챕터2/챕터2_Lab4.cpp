@@ -5,7 +5,7 @@ using namespace std;
 int main() {
 	double num1, num2;
 
-	print("µÎ ½Ç¼ö¸¦ Â÷·Ê·Î ÀÔ·ÂÇÏ¼¼¿ä: ");
+	print("ë‘ ì‹¤ìˆ˜ë¥¼ ì°¨ë¡€ë¡œ ì…ë ¥í•˜ì„¸ìš”: ");
 	cin >> num1;
 	cin >> num2;
 
