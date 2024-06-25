@@ -7,10 +7,10 @@ int main() {
 	const double pi = 3.14;
 	double rad, area;
 
-	print("¿øÀÇ ¹İÁö¸§À» ÀÔ·ÂÇÏ¼¼¿ä: ");
+	print("ì›ì˜ ë°˜ì§€ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”: ");
 	cin >> rad;
 
 	area = pow(rad, 2) * pi;
 
-	print("¿øÀÇ ¹İÁö¸§Àº {}", area);
+	print("ì›ì˜ ë°˜ì§€ë¦„ì€ {}", area);
 }
