@@ -3,12 +3,12 @@ using namespace std;
 
 class Score {
 private:
-	int score1, score2, score3; //¼¼ °ú¸ñ Á¡¼ö¸¦ ÀúÀåÇÒ ¸â¹ö º¯¼ö
+	int score1, score2, score3; //ì„¸ ê³¼ëª© ì ìˆ˜ë¥¼ ì €ì¥í•  ë©¤ë²„ ë³€ìˆ˜
 public:
-	Score(); //±âº» »ı¼ºÀÚ
-	Score(int scr1, int scr2, int scr3); //¸Å°³º¯¼ö »ı¼ºÀÚ
-	Score(const Score& scr1, const Score& scr2, const Score& scr3); //º¹»ç »ı¼ºÀÚ
-	~Score(); //¼Ò¸êÀÚ
+	Score(); //ê¸°ë³¸ ìƒì„±ì
+	Score(int scr1, int scr2, int scr3); //ë§¤ê°œë³€ìˆ˜ ìƒì„±ì
+	Score(const Score& scr1, const Score& scr2, const Score& scr3); //ë³µì‚¬ ìƒì„±ì
+	~Score(); //ì†Œë©¸ì
 
 	void print();
 	int sum();
@@ -29,11 +29,11 @@ int main() {
 	cout << student3.sum() << "\n";
 }
 
-Score::Score() : score1{ 0 }, score2{ 1 }, score3{ 2 } { //Á¡¼ö ÀÔ·ÂÀÌ ¾ø´Ù¸é 0, 1, 2·Î Á¡¼ö¸¦ ÃÊ±âÈ­
+Score::Score() : score1{ 0 }, score2{ 1 }, score3{ 2 } { //ì ìˆ˜ ì…ë ¥ì´ ì—†ë‹¤ë©´ 0, 1, 2ë¡œ ì ìˆ˜ë¥¼ ì´ˆê¸°í™”
 
 }
 
-Score::Score(int scr1, int scr2, int scr3) : score1{ scr1 }, score2{ scr2 }, score3{ scr3 } { //¸Å°³º¯¼ö·Î ÀÔ·Â¹ŞÀº °ª ¸â¹ö º¯¼ö·Î ÀúÀå
+Score::Score(int scr1, int scr2, int scr3) : score1{ scr1 }, score2{ scr2 }, score3{ scr3 } { //ë§¤ê°œë³€ìˆ˜ë¡œ ì…ë ¥ë°›ì€ ê°’ ë©¤ë²„ ë³€ìˆ˜ë¡œ ì €ì¥
 
 }
 
