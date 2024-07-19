@@ -19,17 +19,17 @@ int main() {
         cin >> mid >> fin;
 
         stunum = i + 1;
-        Student student;  // »õ·Î¿î ÇĞ»ı °´Ã¼¸¦ »ı¼º
-        student.SetInfo(mid, fin, stunum);  // Á¤º¸¸¦ ¼³Á¤
-        students.push_back(student);  // º¤ÅÍ¿¡ ÇĞ»ı Ãß°¡
+        Student student;  // ìƒˆë¡œìš´ í•™ìƒ ê°ì²´ë¥¼ ìƒì„±
+        student.SetInfo(mid, fin, stunum);  // ì •ë³´ë¥¼ ì„¤ì •
+        students.push_back(student);  // ë²¡í„°ì— í•™ìƒ ì¶”ê°€
     }
 
     cout << setw(12) << "            " << setw(7) << "midterm" << " " << setw(5) << "final\n";
     for (int i = 0; i < num; i++) {
-        students[i].GetInfo();  // ÇĞ»ı Á¤º¸ Ãâ·Â
+        students[i].GetInfo();  // í•™ìƒ ì •ë³´ ì¶œë ¥
     }
-    cout << setw(12) << right << "Average: " << setw(7) << right << fixed << setprecision(1) << aver.GetMidAverage(num) << " "; // Áß°£ ½ÃÇè Æò±Õ Ãâ·Â
-    cout << setw(5) << right << fixed << setprecision(1) << aver.GetFinAverage(num); //±â¸»½ÃÇè Æò±Õ Ãâ·Â
+    cout << setw(12) << right << "Average: " << setw(7) << right << fixed << setprecision(1) << aver.GetMidAverage(num) << " "; // ì¤‘ê°„ ì‹œí—˜ í‰ê·  ì¶œë ¥
+    cout << setw(5) << right << fixed << setprecision(1) << aver.GetFinAverage(num); //ê¸°ë§ì‹œí—˜ í‰ê·  ì¶œë ¥
 
     return 0;
 }
