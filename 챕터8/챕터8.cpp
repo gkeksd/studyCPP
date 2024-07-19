@@ -11,9 +11,9 @@ int main() {
 	int minmaxScore[2];
 	
 	vector<string> name;
-	string _name; //ÀÌ¸§ ÀÔ·ÂµÈ °ª ÀúÀå º¯¼ö
+	string _name; //ì´ë¦„ ì…ë ¥ëœ ê°’ ì €ì¥ ë³€ìˆ˜
 	vector<int> score;
-	int _score; //¼ºÀû ÀÔ·ÂµÈ °ª ÀúÀå º¯¼ö
+	int _score; //ì„±ì  ì…ë ¥ëœ ê°’ ì €ì¥ ë³€ìˆ˜
 	
 	cout << "Enter the number and score of student\n";
 	while (cout << "(EOF to quit) ") {
@@ -32,9 +32,9 @@ int main() {
 }
 
 void findMinMaxStudent(vector<string>& a, vector<int>& b, string Name[2], int Score[2]) {
-	string minName, maxName; //ÃÖ¼Ò¿Í ÃÖ´ë Á¡¼ö ¹ŞÀº ÇĞ»ı ÀÌ¸§ ÀúÀåÇÏ´Â º¯¼ö
-	int minScore = INT_MAX; //ÃÖ¼Ò ¼ºÀû ÀúÀåÇÏ´Â º¯¼ö
-	int maxScore = INT_MIN; //ÃÖ´ë ¼ºÀû ÀúÀåÇÏ´Â º¯¼ö
+	string minName, maxName; //ìµœì†Œì™€ ìµœëŒ€ ì ìˆ˜ ë°›ì€ í•™ìƒ ì´ë¦„ ì €ì¥í•˜ëŠ” ë³€ìˆ˜
+	int minScore = INT_MAX; //ìµœì†Œ ì„±ì  ì €ì¥í•˜ëŠ” ë³€ìˆ˜
+	int maxScore = INT_MIN; //ìµœëŒ€ ì„±ì  ì €ì¥í•˜ëŠ” ë³€ìˆ˜
 
 	for (int i = 0; i < b.size(); i++) {
 		if (b[i] < minScore) {
