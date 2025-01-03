@@ -9,7 +9,7 @@ int main() {
         if (num == "0") break;
         int len = num.length();
         n_num = string(num.length(), ' ');
-        // for ¹® ´ë½Å string n_num = string(num.rbegin(), num.rend());·Îµµ ±¸Çö °¡´É
+        // for ë¬¸ ëŒ€ì‹  string n_num = string(num.rbegin(), num.rend());ë¡œë„ êµ¬í˜„ ê°€ëŠ¥
         for (int i = 0; i < len; i++) {
             n_num[i] = num[len - i - 1];
         }
