@@ -2,7 +2,7 @@
 using namespace std;
 
 class Complex {
-	// Å¬·¡½º ¿ÜºÎ¿¡¼­µµ µ¥ÀÌÅÍ ¸â¹ö¿¡ Á¢±Ù °¡´ÉÇÏ°Ô ÇØÁÜ
+	// í´ë˜ìŠ¤ ì™¸ë¶€ì—ì„œë„ ë°ì´í„° ë©¤ë²„ì— ì ‘ê·¼ ê°€ëŠ¥í•˜ê²Œ í•´ì¤Œ
 	friend Complex operator+(const Complex& left, const Complex& right);
 private:
 	int real, imaginary;
@@ -13,16 +13,16 @@ public:
 		int imag = this->imaginary + right.imaginary;
 		return Complex(real, imag);
 	}
-	// Á¤¼öÇüÀ¸·Î º¯È¯
+	// ì •ìˆ˜í˜•ìœ¼ë¡œ ë³€í™˜
 	operator int() {
 		return this->real;
 	}
-	// ÀüÄ¡¿¬»ê
+	// ì „ì¹˜ì—°ì‚°
 	Complex operator++() {
 		this->real++;
 		return *this;
 	}
-	// ÈÄÄ¡¿¬»ê
+	// í›„ì¹˜ì—°ì‚°
 	Complex operator++(int) {
 		Complex prev(this->real, this->imaginary);
 		this->real++;
@@ -33,34 +33,34 @@ public:
 	int Imaginary() const { return imaginary; }
 };
 
-// ¸â¹öÇÔ¼ö°¡ ¾Æ´Ñ ÀÏ¹İ ÇÔ¼öÀÇ ¿¬»êÀÚ ¿À¹ö·Îµù
+// ë©¤ë²„í•¨ìˆ˜ê°€ ì•„ë‹Œ ì¼ë°˜ í•¨ìˆ˜ì˜ ì—°ì‚°ì ì˜¤ë²„ë¡œë”©
 Complex operator+(const Complex& left, const Complex& right) {
 	int real = left.real + right.real;
 	int imag = left.imaginary + right.imaginary;
 	return Complex(real, imag);
 }
 
-// a + bi ÇüÅÂ·ÎÀÇ °´Ã¼ Ãâ·ÂÀ» À§ÇÑ << ¿¬»êÀÚ ¿À¹ö·Îµù
+// a + bi í˜•íƒœë¡œì˜ ê°ì²´ ì¶œë ¥ì„ ìœ„í•œ << ì—°ì‚°ì ì˜¤ë²„ë¡œë”©
 ostream& operator <<(ostream& o, const Complex& right) {
 	o << right.Real() << showpos << right.Imaginary() << "i" << noshowpos;
 	return o;
 }
 
 int main() {
-	// ÇÇ¿¬»êÀÚ°¡ µÎ°³ÀÏ¶§
+	// í”¼ì—°ì‚°ìê°€ ë‘ê°œì¼ë•Œ
 	Complex c1(1, 1), c2(7, 2), c3(0, 0);
 
-	c3 = c1 + c2; // c1Àº this Æ÷ÀÎÅÍ È¤Àº left·Î, c2´Â right·Î, c3´Â return °ªÀ¸·Î µé¾î°¨.
+	c3 = c1 + c2; // c1ì€ this í¬ì¸í„° í˜¹ì€ leftë¡œ, c2ëŠ” rightë¡œ, c3ëŠ” return ê°’ìœ¼ë¡œ ë“¤ì–´ê°.
 	 cout << c3.Real() << "," << c3.Imaginary() << "\n";
 
-	 //a + bi ÇüÅÂ·ÎÀÇ °´Ã¼ Ãâ·Â
+	 //a + bi í˜•íƒœë¡œì˜ ê°ì²´ ì¶œë ¥
 	 cout << c3 << "\n";
 
-	 // Á¤¼öÇüÀ¸·ÎÀÇ º¯È¯ÇØ Ãâ·Â
-	 int i = c2.operator int(); // ±×³É int i = c2;¸¦ ÅëÇØ Ãâ·Âµµ °¡´ÉÀº ÇÔ.
+	 // ì •ìˆ˜í˜•ìœ¼ë¡œì˜ ë³€í™˜í•´ ì¶œë ¥
+	 int i = c2.operator int(); // ê·¸ëƒ¥ int i = c2;ë¥¼ í†µí•´ ì¶œë ¥ë„ ê°€ëŠ¥ì€ í•¨.
 	 cout << i << "\n";
 
-	 // ÇÇ¿¬»êÀÚ°¡ ÇÑ°³ÀÏ¶§
+	 // í”¼ì—°ì‚°ìê°€ í•œê°œì¼ë•Œ
 	 Complex c(1, 1), prefix(0, 0), postfix(0, 0);
 
 	 prefix = ++c; // prefix = c = (2, 1)
