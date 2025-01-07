@@ -15,11 +15,11 @@ public:
 		ptr = nullptr;
 	}
 	void setAt(int index, int value) {
-		if (index < 0 || index >= size) throw MyException(4882, "гр╢Г ©ю╥Ы\n", this);
+		if (index < 0 || index >= size) throw MyException(4882, "ц┤ц▓б╢ц╖ б©ц─б╥ц╧\n", this);
 		ptr[index] = value;
 	}
 	int getAt(int index) {
-		if (index < 0 || index >= size) throw MyException(4882, "а╒╠ы ©ю╥Ы\n", this);
+		if (index < 0 || index >= size) throw MyException(4882, "ц│б╒б╠ц≥ б©ц─б╥ц╧\n", this);
 		else return ptr[index];
 	}
 };
