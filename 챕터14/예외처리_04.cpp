@@ -1,3 +1,4 @@
+// 모던 예외처리 기법 예제 3
 #include <iostream>
 using namespace std;
 
