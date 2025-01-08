@@ -1,3 +1,4 @@
+// 고전적인 예외처리 기법 예제
 #include <iostream>
 #include <cassert>
 using namespace std;
