@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-// ¿ø·¡´Â ÆÄÀÏ ºĞ¸®ÇØ¾ß ÇÔ
+// ì›ë˜ëŠ” íŒŒì¼ ë¶„ë¦¬í•´ì•¼ í•¨
 
 class Complex {
 public:
@@ -24,22 +24,22 @@ private:
 	Complex* ptr;
 public:
 	SmartPtr(Complex* p) : ptr(p) {};
-	~SmartPtr() { delete ptr; }; // Èü¸Ş¸ğ¸® ÇØÁ¦
-	Complex& operator*() const { return *ptr; } // °ªÀ» ¸®ÅÏ
-	Complex* operator->() const { return ptr; } // ÁÖ¼Ò¸¦ ¸®ÅÏ
+	~SmartPtr() { delete ptr; }; // í™ë©”ëª¨ë¦¬ í•´ì œ
+	Complex& operator*() const { return *ptr; } // ê°’ì„ ë¦¬í„´
+	Complex* operator->() const { return ptr; } // ì£¼ì†Œë¥¼ ë¦¬í„´
 };
 
-// a + bi ÇüÅÂ·ÎÀÇ °´Ã¼ Ãâ·ÂÀ» À§ÇÑ << ¿¬»êÀÚ ¿À¹ö·Îµù
+// a + bi í˜•íƒœë¡œì˜ ê°ì²´ ì¶œë ¥ì„ ìœ„í•œ << ì—°ì‚°ì ì˜¤ë²„ë¡œë”©
 ostream& operator <<(ostream& o, const Complex& right) {
-	o << right.getReal() << showpos << right.getImaginary() << "i" << noshowpos; // showpos´Â ¾ç¼öÀÏ¶§ +±âÈ£¸¦ ºÙÀÌ´Â Á¶Á¤ÀÚ
+	o << right.getReal() << showpos << right.getImaginary() << "i" << noshowpos; // showposëŠ” ì–‘ìˆ˜ì¼ë•Œ +ê¸°í˜¸ë¥¼ ë¶™ì´ëŠ” ì¡°ì •ì
 	return o;
 }
 
 int main() {
-	SmartPtr sp = new Complex(2, 5); // sp °´Ã¼ ½º¸¶Æ®Æ÷ÀÎÅÍ°¡ main ÇÔ¼ö Á¾·á ½Ã¿¡ ÀÚµ¿À¸·Î Complex °´Ã¼ÀÇ Èü ¸Ş¸ğ¸®¸¦ ÇØÁ¦ÇØ ÁÜ.
-	// * ¿¬»êÀÚ·Î ¸â¹ö¿¡ Á¢±Ù
+	SmartPtr sp = new Complex(2, 5); // sp ê°ì²´ ìŠ¤ë§ˆíŠ¸í¬ì¸í„°ê°€ main í•¨ìˆ˜ ì¢…ë£Œ ì‹œì— ìë™ìœ¼ë¡œ Complex ê°ì²´ì˜ í™ ë©”ëª¨ë¦¬ë¥¼ í•´ì œí•´ ì¤Œ.
+	// * ì—°ì‚°ìë¡œ ë©¤ë²„ì— ì ‘ê·¼
 	cout << "Complex: " << (*sp) << "\n";
-	// -> ¿¬»êÀÚ·Î ¸â¹ö¿¡ Á¢±Ù
+	// -> ì—°ì‚°ìë¡œ ë©¤ë²„ì— ì ‘ê·¼
 	cout << "Complex: " << sp->getReal() << showpos << sp->getImaginary() << "i";
 
 	return 0;
