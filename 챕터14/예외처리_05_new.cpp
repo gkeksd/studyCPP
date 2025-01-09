@@ -1,6 +1,6 @@
 #include "dynamicarray_SPtr.h"
 #include "Myexception.h"
-#include "smartptr.h"
+#include "smartptr_new.h"
 
 int main()
 {
@@ -20,7 +20,7 @@ int main()
         //cout << da01.getAt(5) << '\n';  // !
     }
     catch (int err) {
-        cout << "¿¡·¯ ÄÚµå : " << err << '\n';
+        cout << "Â¿Â¡Â·Â¯ Ã„ÃšÂµÃ¥ : " << err << '\n';
     }
     catch (const char* texts) {
         cout << texts;
