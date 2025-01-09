@@ -3,12 +3,13 @@
 #include "Myexception.h"
 using namespace std;
 
-class DynamicArray {
-	int* ptr;
+class SmartPtr;
+class DynamicArray_SPtr {
+	SmartPtr sp;
 	int size;
 public:
-	DynamicArray(int size);
-	virtual ~DynamicArray();
+	DynamicArray_SPtr(int size);
+	virtual ~DynamicArray_SPtr();
 	void setAt(int index, int value);
 	int getAt(int index);
 };

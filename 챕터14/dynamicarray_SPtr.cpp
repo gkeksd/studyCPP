@@ -1,9 +1,10 @@
-#include "dynamicarray.h"
+#include "dynamicarray_SPtr.h"
+#include "smartptr.h"
 
-DynamicArray::DynamicArray(int size) : size(size) {
+DynamicArray_SPtr::DynamicArray_SPtr(int size) : size(size), sp(new int[size]) {
 	try {
-		ptr = new int[size];
-		for (int i = 0; i < size; i++) ptr[i] = 0;
+		//sp = new int[size];
+		for (int i = 0; i < size; i++) sp[i] = 0; // 대괄호 연산자 오버로드됨
 
 		//throw MyException(2000, "메모리 오류", this);
 	}
@@ -13,17 +14,15 @@ DynamicArray::DynamicArray(int size) : size(size) {
 		throw;
 	}
 }
-DynamicArray::~DynamicArray() {
-	delete[] ptr;
-	ptr = nullptr;
+DynamicArray_SPtr::~DynamicArray_SPtr() {
 	cout << "힙 메모리 해제 완료!\n";
 }
 
-void DynamicArray::setAt(int index, int value) {
+void DynamicArray_SPtr::setAt(int index, int value) {
 	if (index < 0 || index >= size) throw MyException(4882, "할당 오류\n", this);
-	ptr[index] = value;
+	sp[index] = value;
 }
-int DynamicArray::getAt(int index) {
+int DynamicArray_SPtr::getAt(int index) {
 	if (index < 0 || index >= size) throw MyException(4882, "접근 오류\n", this);
-	else return ptr[index];
+	else return sp[index];
 }
