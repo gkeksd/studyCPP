@@ -1,4 +1,6 @@
-#pragma once
+#ifndef DYNAMICARRAY_SPTR_H
+#define DYNAMICARRAY_SPTR_H
+
 #include <iostream>
 #include "Myexception.h"
 using namespace std;
@@ -13,3 +15,5 @@ public:
 	void setAt(int index, int value);
 	int getAt(int index);
 };
+
+#endif
