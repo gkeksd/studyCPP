@@ -1,28 +1,29 @@
 #include "dynamicarray_SPtr.h"
-#include "smartptr.h"
+//#include "smartptr.h"
+#include "smartptr_new.h"
 
 DynamicArray_SPtr::DynamicArray_SPtr(int size) : size(size), sp(new int[size]) {
 	try {
 		//sp = new int[size];
-		for (int i = 0; i < size; i++) sp[i] = 0; // ´ë°ýÈ£ ¿¬»êÀÚ ¿À¹ö·ÎµåµÊ
+		for (int i = 0; i < size; i++) sp[i] = 0; // ëŒ€ê´„í˜¸ ì—°ì‚°ìž ì˜¤ë²„ë¡œë“œë¨
 
-		//throw MyException(2000, "¸Þ¸ð¸® ¿À·ù", this);
+		//throw MyException(2000, "ë©”ëª¨ë¦¬ ì˜¤ë¥˜", this);
 	}
 	//catch (const MyException& me) {
-	catch (...) { // ¾î¶°ÇÑ ¿À·ù °æ¿ì¿¡µµ µ¿ÀÛ
-		cout << "°´Ã¼ »ý¼º ¿Ï·á!\n";
+	catch (...) { // ì–´ë– í•œ ì˜¤ë¥˜ ê²½ìš°ì—ë„ ë™ìž‘
+		cout << "ê°ì²´ ìƒì„± ì™„ë£Œ!\n";
 		throw;
 	}
 }
 DynamicArray_SPtr::~DynamicArray_SPtr() {
-	cout << "Èü ¸Þ¸ð¸® ÇØÁ¦ ¿Ï·á!\n";
+	cout << "íž™ ë©”ëª¨ë¦¬ í•´ì œ ì™„ë£Œ!\n";
 }
 
 void DynamicArray_SPtr::setAt(int index, int value) {
-	if (index < 0 || index >= size) throw MyException(4882, "ÇÒ´ç ¿À·ù\n", this);
+	if (index < 0 || index >= size) throw MyException(4882, "í• ë‹¹ ì˜¤ë¥˜\n", this);
 	sp[index] = value;
 }
 int DynamicArray_SPtr::getAt(int index) {
-	if (index < 0 || index >= size) throw MyException(4882, "Á¢±Ù ¿À·ù\n", this);
+	if (index < 0 || index >= size) throw MyException(4882, "ì ‘ê·¼ ì˜¤ë¥˜\n", this);
 	else return sp[index];
 }
